@@ -15,7 +15,7 @@ const BlogPost = ({ data, pageContext  }) => {
 
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} />
+      <SEO title={post.frontmatter.title} description={post.frontmatter.description} image={post.frontmatter.image}/>
       {/* <h1>Title: {post.frontmatter.title}</h1> */}
       {/* dangerouslySetInnerHTML é para transformar o texto HTML em HTML de fato */}
       {/* <div dangerouslySetInnerHTML={{ __html: post.html }}></div> */}
@@ -45,6 +45,7 @@ export const query = graphql`
         title
         description
         date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+        image
       }
       html
       timeToRead

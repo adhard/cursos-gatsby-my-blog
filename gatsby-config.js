@@ -7,7 +7,8 @@ module.exports = {
     title: `My blog`,
     description: `Eu fugiat tempor deserunt sunt duis. Eiusmod ex magna duis reprehenderit duis ipsum.`,
     author: `Adriano Hardtke`,
-    position: 'Backend developer'
+    position: 'Backend developer',
+    siteUrl: `https://johndoe.com.br`
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -34,6 +35,7 @@ module.exports = {
         path: `${__dirname}/posts`,
       },
     },
+    `gatsby-plugin-transition-link`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
       {
